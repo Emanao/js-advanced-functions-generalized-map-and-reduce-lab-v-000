@@ -5,7 +5,7 @@ function map(ary, cb){
 }
 
 function reduce(ary, cb, initialValue){
-  console.log(arguments)
+  console.log(arguments[1])
   let accu;
   ary.forEach(elem=>cb(initialValue, elem));
   return accu;
