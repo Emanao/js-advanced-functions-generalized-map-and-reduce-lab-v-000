@@ -13,10 +13,10 @@ function reduce(ary, cb, initialValue){
   if (!!initialValue){
     accu = initialValue;
   }else {
-    //accu
+    accu =aryCopy.shift();
   }
   console.log(accu +":"+ initialValue+":"+ary[0]);
-  ary.forEach(elem => {
+  aryCopy.forEach(elem => {
     accu = cb(elem, accu)
     console.log(accu);
   });
