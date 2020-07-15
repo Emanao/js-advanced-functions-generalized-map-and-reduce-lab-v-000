@@ -5,13 +5,13 @@ function map(ary, cb){
 }
 
 function reduce(ary, cb, initialValue){
-  cont aryCopy = [...ary]
-  console.log(aryCopy)
+  cont aryCopy = [...ary];
+  console.log(aryCopy);
   let accu;
   // =Boolean(initialValue)?initialValue:ary[0];
 
   if (!!initialValue){
-    accu = initialValue
+    accu = initialValue;
   }else {
     accu
   }
