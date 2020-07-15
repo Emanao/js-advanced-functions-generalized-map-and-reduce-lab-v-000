@@ -13,7 +13,7 @@ function reduce(ary, cb, initialValue){
   if (!!initialValue){
     accu = initialValue;
   }else {
-    accu
+    //accu
   }
   console.log(accu +":"+ initialValue+":"+ary[0]);
   ary.forEach(elem => {
