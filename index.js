@@ -5,7 +5,14 @@ function map(ary, cb){
 }
 
 function reduce(ary, cb, initialValue){
-  let accu =Boolean(initialValue)?initialValue:ary[0];
+  let accu
+  // =Boolean(initialValue)?initialValue:ary[0];
+
+  if (!!initialValue){
+    accu = initialValue
+  }else {
+    accu
+  }
   console.log(accu +":"+ initialValue+":"+ary[0]);
   ary.forEach(elem => {
     accu = cb(elem, accu)
