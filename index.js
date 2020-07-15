@@ -6,7 +6,7 @@ function map(ary, cb){
 
 function reduce(ary, cb, initialValue){
   const aryCopy = [...ary];
-  let accu = (!!initialValue)? (accu = initialValue):(accu =aryCopy.shift());
+  let accu = (!!initialValue)?(accu = initialValue):(accu =aryCopy.shift());
 
   aryCopy.forEach(elem => accu = cb(elem, accu));
   return accu;
