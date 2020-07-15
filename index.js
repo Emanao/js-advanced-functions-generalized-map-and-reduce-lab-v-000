@@ -6,19 +6,8 @@ function map(ary, cb){
 
 function reduce(ary, cb, initialValue){
   const aryCopy = [...ary];
-  console.log(aryCopy);
-  let accu;
-  // =Boolean(initialValue)?initialValue:ary[0];
+  let accu = (!!initialValue)? accu = initialValue:accu =aryCopy.shift();
 
-  if (!!initialValue){
-    accu = initialValue;
-  }else {
-    accu =aryCopy.shift();
-  }
-  console.log(accu +":"+ initialValue+":"+ary[0]);
-  aryCopy.forEach(elem => {
-    accu = cb(elem, accu)
-    console.log(accu);
-  });
+  aryCopy.forEach(elem => accu = cb(elem, accu));
   return accu;
 }
