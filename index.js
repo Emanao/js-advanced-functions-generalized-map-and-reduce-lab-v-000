@@ -5,7 +5,9 @@ function map(ary, cb){
 }
 
 function reduce(ary, cb, initialValue){
-  let accu
+  cont aryCopy = [...ary]
+  console.log(aryCopy)
+  let accu;
   // =Boolean(initialValue)?initialValue:ary[0];
 
   if (!!initialValue){
